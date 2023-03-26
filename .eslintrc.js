@@ -1,4 +1,10 @@
 module.exports = {
+  root: true,
+  env: {
+    node: true,
+    jest: true,
+  },
+  ignorePatterns: ['.eslintrc.js'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: 'tsconfig.json',
@@ -70,6 +76,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    "@typescript-eslint/no-floating-promises": 0,
     // 导入模块的顺序
     'import/order': [
       'error',
@@ -97,11 +104,5 @@ module.exports = {
         ],
       },
     ],
-  },
-  root: true,
-  env: {
-    node: true,
-    jest: true,
-  },
-  ignorePatterns: ['.eslintrc.js'],
+  }
 };
